@@ -1,0 +1,27 @@
+.c-placeholder-grid {
+  display: grid;
+  gap: var(--card-gap);
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 768px) {
+  .c-placeholder-grid--2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 900px) {
+  .c-placeholder-grid--3 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1200px) {
+  .c-placeholder-grid--3 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .c-placeholder-grid--3 .c-chart-card--wide {
+    grid-column: 1 / -1;
+  }
+}

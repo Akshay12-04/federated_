@@ -1,0 +1,21 @@
+{
+  "page": {
+    "title": "Healthcare Assistant",
+    "subtitle": "Ask questions about your health predictions and federated learning insights"
+  },
+  "welcome": "Hello! I'm your CardioFL assistant. I can explain risk factors, federated learning, and lifestyle guidance. How can I help?",
+  "suggestedPrompts": [
+    "What are the main risk factors?",
+    "Explain my prediction result",
+    "How does federated learning work?",
+    "What lifestyle changes are recommended?"
+  ],
+  "mockReplies": {
+    "risk factors": "Key cardiovascular risk factors include age, cholesterol, blood pressure, smoking, diabetes, family history, and stress. The federated model weighs these using encrypted hospital data without sharing raw records.",
+    "prediction": "Your risk score is a probability (0–100%) from the global model. Values at or above 50% are flagged HIGH. Always discuss results with a qualified clinician.",
+    "federated": "Federated learning trains a shared model across hospitals. Each site keeps patient data local and only sends model weight updates to the central server for aggregation (FedAvg).",
+    "lifestyle": "Evidence-based steps: 150 min moderate exercise weekly, reduce sodium, manage stress, 7–8 hours sleep, and smoking cessation if applicable.",
+    "default": "I can help with risk interpretation, federated learning, and general wellness guidance. Try a suggested prompt or ask a specific question."
+  },
+  "disclaimer": "Medical Disclaimer: This assistant provides general information only and is not a substitute for professional medical advice."
+}

@@ -1,0 +1,17 @@
+.c-page-header {
+  margin-bottom: var(--space-8);
+}
+
+.c-page-header__title {
+  font-size: var(--text-2xl);
+  font-weight: var(--font-bold);
+  letter-spacing: var(--tracking-tight);
+  color: var(--color-text-primary);
+}
+
+.c-page-header__subtitle {
+  margin-top: var(--space-2);
+  font-size: var(--text-sm);
+  color: var(--color-text-secondary);
+  max-width: 640px;
+}

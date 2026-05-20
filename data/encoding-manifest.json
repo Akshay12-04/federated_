@@ -1,0 +1,40 @@
+{
+  "version": 1,
+  "source": "LabelEncoder on data/heart_disease_federated.csv (NOT streamlit CAT_ENCODE)",
+  "feature_order": [
+    "age", "gender", "bmi", "family_history_heart_disease", "diabetes", "hypertension",
+    "previous_heart_event", "cholesterol_total", "hdl_cholesterol", "ldl_cholesterol",
+    "blood_pressure_systolic", "blood_pressure_diastolic", "resting_heart_rate",
+    "fasting_blood_sugar", "ecg_result", "smoking_status", "cigarettes_per_day",
+    "alcohol_units_per_week", "physical_activity_level", "exercise_hours_per_week",
+    "walks_daily", "plays_sport", "sleep_hours_per_night", "sleep_quality",
+    "stress_level", "depression_anxiety", "diet_quality", "fruit_veg_servings_per_day",
+    "salt_intake"
+  ],
+  "categories": {
+    "gender": { "Female": 0, "Male": 1, "Other": 2 },
+    "ecg_result": { "LVH": 0, "Normal": 1, "ST-Abnormality": 2 },
+    "smoking_status": { "Current": 0, "Former": 1, "Never": 2 },
+    "physical_activity_level": { "Active": 0, "Light": 1, "Moderate": 2, "Sedentary": 3 },
+    "sleep_quality": { "Fair": 0, "Good": 1, "Poor": 2 },
+    "diet_quality": { "Average": 0, "Healthy": 1, "Unhealthy": 2 },
+    "salt_intake": { "High": 0, "Low": 1, "Medium": 2 }
+  },
+  "wizard_defaults": {
+    "hdl_cholesterol": 50,
+    "ldl_cholesterol": 130,
+    "blood_pressure_diastolic": 80,
+    "resting_heart_rate": 72,
+    "fasting_blood_sugar": 100,
+    "cigarettes_per_day": 0,
+    "walks_daily": 0,
+    "plays_sport": 0,
+    "depression_anxiety": 0,
+    "fruit_veg_servings_per_day": 3,
+    "family_history_heart_disease": 0,
+    "diabetes": 0,
+    "hypertension": 0,
+    "previous_heart_event": 0
+  },
+  "_phase": "B — consumed by domain/wizardToFeatures.js and api/services/encoding.py"
+}

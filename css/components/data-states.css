@@ -1,0 +1,7 @@
+.c-data-state {
+  max-width: 720px;
+}
+
+.c-data-state--loading .c-card__body {
+  color: var(--color-text-secondary);
+}

@@ -1,0 +1,46 @@
+{
+  "page": {
+    "title": "Settings",
+    "subtitle": "Customize your CardioFL experience and preferences"
+  },
+  "sections": [
+    {
+      "id": "appearance",
+      "title": "Appearance",
+      "rows": [
+        { "key": "darkMode", "type": "toggle", "label": "Dark mode", "hint": "Healthcare dashboard theme", "default": true }
+      ]
+    },
+    {
+      "id": "notifications",
+      "title": "Notifications",
+      "rows": [
+        { "key": "pushNotifications", "type": "toggle", "label": "Push notifications", "hint": "Training & prediction alerts", "default": false },
+        { "key": "soundAlerts", "type": "toggle", "label": "Sound alerts", "hint": "Optional audio cues", "default": false }
+      ]
+    },
+    {
+      "id": "privacy",
+      "title": "Privacy & Security",
+      "rows": [
+        { "key": "twoFactor", "type": "toggle", "label": "Two-factor authentication", "hint": "Extra sign-in protection", "default": false },
+        { "key": "shareMetrics", "type": "toggle", "label": "Share anonymized metrics", "hint": "Federated aggregation only", "default": true }
+      ]
+    },
+    {
+      "id": "ai",
+      "title": "Assistant Settings",
+      "rows": [
+        { "key": "aiSensitivity", "type": "slider", "label": "Assistant sensitivity", "hint": "Higher = more detailed responses", "default": 65, "min": 0, "max": 100 }
+      ]
+    }
+  ],
+  "dataActions": [
+    { "id": "export", "title": "Export Data", "description": "Download assessment history and metrics (JSON)", "button": "Export" },
+    { "id": "privacy", "title": "Privacy Report", "description": "View federated learning privacy summary", "button": "View Report" }
+  ],
+  "privacyBlock": {
+    "title": "Your Privacy Matters",
+    "body": "CardioFL uses federated learning: raw patient data never leaves each hospital. Only encrypted model weight updates are shared. Optional differential privacy adds calibrated noise to protect individual contributions."
+  }
+}
