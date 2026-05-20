@@ -1,0 +1,9 @@
+/* Shared page layout */
+
+.c-card--wide {
+  grid-column: 1 / -1;
+}
+
+.p-page .c-page-header {
+  margin-bottom: var(--space-8);
+}

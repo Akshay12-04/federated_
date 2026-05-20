@@ -1,0 +1,60 @@
+{
+  "filters": ["all", "predictions", "training", "errors"],
+  "items": [
+    {
+      "id": "1",
+      "type": "predictions",
+      "severity": "success",
+      "title": "Prediction Completed",
+      "description": "Patient #2847 assessed — 68.4% risk (HIGH)",
+      "timestamp": "2026-05-20T14:32:15Z",
+      "relative": "2 min ago"
+    },
+    {
+      "id": "2",
+      "type": "training",
+      "severity": "info",
+      "title": "Federated Round 6 Finished",
+      "description": "Global accuracy 94.2% · avg client loss 0.21",
+      "timestamp": "2026-05-20T13:45:00Z",
+      "relative": "47 min ago"
+    },
+    {
+      "id": "3",
+      "type": "training",
+      "severity": "info",
+      "title": "Hospital-03 Node Synced",
+      "description": "Weight update received · 1,710 samples",
+      "timestamp": "2026-05-20T13:44:12Z",
+      "relative": "48 min ago"
+    },
+    {
+      "id": "4",
+      "type": "predictions",
+      "severity": "success",
+      "title": "Low Risk Assessment",
+      "description": "Patient #2841 — 22.1% risk (LOW)",
+      "timestamp": "2026-05-20T12:10:00Z",
+      "relative": "2 hr ago"
+    },
+    {
+      "id": "5",
+      "type": "errors",
+      "severity": "warn",
+      "title": "Training Delay Warning",
+      "description": "Hospital-02 response slow · retry succeeded",
+      "timestamp": "2026-05-20T11:30:00Z",
+      "relative": "3 hr ago"
+    },
+    {
+      "id": "6",
+      "type": "training",
+      "severity": "info",
+      "title": "Training Job Started",
+      "description": "Preset: Balanced · 5 rounds · DP enabled",
+      "timestamp": "2026-05-20T11:00:00Z",
+      "relative": "3 hr ago"
+    }
+  ],
+  "hasMore": true
+}

@@ -1,0 +1,84 @@
+.c-log-item {
+  display: flex;
+  gap: var(--space-4);
+  padding: var(--space-4) var(--space-5);
+  background: var(--color-bg-card);
+  border: var(--card-border);
+  border-radius: var(--card-radius);
+}
+
+.c-log-item__icon {
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.c-log-item__icon--success {
+  background: rgba(34, 197, 94, 0.12);
+  color: var(--color-success);
+}
+
+.c-log-item__icon--info {
+  background: var(--color-primary-muted);
+  color: var(--color-primary);
+}
+
+.c-log-item__icon--warn {
+  background: rgba(245, 158, 11, 0.12);
+  color: var(--color-warning);
+}
+
+.c-log-item__body {
+  flex: 1;
+  min-width: 0;
+}
+
+.c-log-item__title {
+  font-size: var(--text-sm);
+  font-weight: var(--font-semibold);
+  color: var(--color-text-primary);
+}
+
+.c-log-item__desc {
+  margin-top: var(--space-1);
+  font-size: var(--text-sm);
+  color: var(--color-text-secondary);
+}
+
+.c-log-item__time {
+  font-size: var(--text-xs);
+  color: var(--color-text-muted);
+  white-space: nowrap;
+}
+
+.c-filter-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+}
+
+.c-filter-tabs__btn {
+  height: 36px;
+  padding: 0 var(--space-4);
+  border-radius: var(--radius-full);
+  font-size: var(--text-sm);
+  font-weight: var(--font-medium);
+  color: var(--color-text-secondary);
+  border: 1px solid var(--color-border-subtle);
+  background: var(--color-bg-card);
+}
+
+.c-filter-tabs__btn.is-active {
+  color: var(--color-text-inverse);
+  background: var(--gradient-primary);
+  border-color: transparent;
+}
+
+.c-filter-tabs__btn:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}

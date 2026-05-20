@@ -1,0 +1,8 @@
+[
+  { "round": 1, "avg_client_loss": 0.27, "avg_client_acc": 0.88, "accuracy": 0.725 },
+  { "round": 2, "avg_client_loss": 0.248, "avg_client_acc": 0.892, "accuracy": 0.718 },
+  { "round": 3, "avg_client_loss": 0.246, "avg_client_acc": 0.893, "accuracy": 0.727 },
+  { "round": 4, "avg_client_loss": 0.232, "avg_client_acc": 0.898, "accuracy": 0.801 },
+  { "round": 5, "avg_client_loss": 0.218, "avg_client_acc": 0.905, "accuracy": 0.842 },
+  { "round": 6, "avg_client_loss": 0.205, "avg_client_acc": 0.912, "accuracy": 0.942 }
+]

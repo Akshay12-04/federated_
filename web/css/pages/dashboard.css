@@ -1,0 +1,59 @@
+/* Dashboard layout — screenshot-aligned hierarchy */
+
+.p-dashboard__kpi-grid {
+  display: grid;
+  gap: var(--card-gap);
+  grid-template-columns: 1fr;
+  margin-bottom: var(--space-8);
+}
+
+@media (min-width: 640px) {
+  .p-dashboard__kpi-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .p-dashboard__kpi-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.p-dashboard__charts {
+  display: flex;
+  flex-direction: column;
+  gap: var(--card-gap);
+}
+
+.p-dashboard__charts-top {
+  display: grid;
+  gap: var(--card-gap);
+  grid-template-columns: 1fr;
+  align-items: stretch;
+}
+
+@media (min-width: 1024px) {
+  .p-dashboard__charts-top {
+    grid-template-columns: 1fr 1fr;
+    min-height: 380px;
+  }
+
+  .p-dashboard__charts-top > .c-federated,
+  .p-dashboard__charts-top > .c-chart-card {
+    min-height: 380px;
+  }
+}
+
+.p-dashboard .c-chart-card--wide {
+  width: 100%;
+}
+
+@media (max-width: 1023px) {
+  .p-dashboard__charts-top .c-federated {
+    min-height: 320px;
+  }
+
+  .p-dashboard__charts-top .c-chart-card {
+    min-height: 300px;
+  }
+}

@@ -1,0 +1,5 @@
+{
+  "federated": { "confusion_matrix": null },
+  "centralized": { "confusion_matrix": null },
+  "config": {}
+}

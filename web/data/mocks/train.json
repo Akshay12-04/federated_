@@ -1,0 +1,36 @@
+{
+  "page": {
+    "title": "Federated Learning Training",
+    "subtitle": "Configure and train the federated model across distributed hospital nodes"
+  },
+  "presets": {
+    "demo": { "label": "Demo (Fast)", "rounds": 2, "epochs": 1, "hospitals": 3, "noniid": true, "dp": false },
+    "balanced": { "label": "Balanced", "rounds": 5, "epochs": 3, "hospitals": 5, "noniid": true, "dp": true },
+    "full": { "label": "Full (Slower)", "rounds": 10, "epochs": 5, "hospitals": 5, "noniid": true, "dp": true }
+  },
+  "defaults": {
+    "preset": "balanced",
+    "rounds": 5,
+    "epochs": 3,
+    "hospitals": 5,
+    "noniid": true,
+    "dp": true,
+    "seed": 42,
+    "confirm": true
+  },
+  "hospitalNodes": [
+    { "id": "h1", "label": "Hospital-01", "samples": 1680 },
+    { "id": "h2", "label": "Hospital-02", "samples": 1620 },
+    { "id": "h3", "label": "Hospital-03", "samples": 1710 },
+    { "id": "h4", "label": "Hospital-04", "samples": 1590 },
+    { "id": "h5", "label": "Hospital-05", "samples": 1650 }
+  ],
+  "progressMessages": [
+    "Preparing runtime and folders…",
+    "Loading and preprocessing dataset…",
+    "Partitioning data across hospitals…",
+    "Running federated training rounds…",
+    "Saving model, logs, and plots…",
+    "Training finished. New model is active for prediction."
+  ]
+}

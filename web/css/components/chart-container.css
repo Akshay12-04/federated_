@@ -1,0 +1,108 @@
+.c-chart-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  min-height: 340px;
+  background: var(--color-bg-card);
+  background-image: var(--gradient-card);
+  border: var(--card-border);
+  border-radius: var(--card-radius);
+  padding: var(--card-padding);
+  box-shadow: var(--shadow-sm);
+}
+
+.c-chart-card__header {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  margin-bottom: var(--space-4);
+  flex-shrink: 0;
+}
+
+.c-chart-card__header-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.c-chart-card__header-icon--primary {
+  background: var(--color-primary-muted);
+  color: var(--color-primary);
+}
+
+.c-chart-card__header-icon--green {
+  background: rgba(34, 197, 94, 0.12);
+  color: var(--color-accent-green);
+}
+
+.c-chart-card__title {
+  font-size: var(--text-lg);
+  font-weight: var(--font-semibold);
+  color: var(--color-text-primary);
+}
+
+.c-chart-card__canvas-wrap {
+  position: relative;
+  flex: 1;
+  min-height: 220px;
+  width: 100%;
+  border-radius: var(--radius-md);
+  background: var(--color-bg-input);
+  border: 1px dashed var(--color-border-default);
+  overflow: hidden;
+}
+
+.c-chart-card__canvas-wrap--live {
+  border-style: solid;
+  border-color: var(--color-border-subtle);
+  padding: var(--space-2) var(--space-1) 0;
+}
+
+.c-chart-card--wide .c-chart-card__canvas-wrap {
+  min-height: 240px;
+}
+
+@media (min-width: 768px) {
+  .c-chart-card__canvas-wrap {
+    min-height: 260px;
+  }
+
+  .c-chart-card--wide .c-chart-card__canvas-wrap {
+    min-height: 280px;
+  }
+}
+
+/* Placeholder skeleton (other pages) */
+.c-chart-placeholder {
+  position: absolute;
+  inset: var(--space-6) var(--space-4) var(--space-10);
+  display: flex;
+  align-items: flex-end;
+  gap: 6px;
+}
+
+.c-chart-placeholder__bar {
+  flex: 1;
+  border-radius: var(--radius-sm) var(--radius-sm) 0 0;
+  min-height: 12%;
+}
+
+.c-chart-placeholder--line .c-chart-placeholder__bar {
+  background: linear-gradient(180deg, var(--chart-line-success) 0%, rgba(34, 197, 94, 0.2) 100%);
+}
+
+.c-chart-placeholder--area .c-chart-placeholder__bar {
+  background: linear-gradient(180deg, var(--chart-line-primary) 0%, var(--chart-fill-primary) 100%);
+}
+
+.c-chart-placeholder__label {
+  position: absolute;
+  bottom: var(--space-3);
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: var(--text-xs);
+  color: var(--color-text-muted);
+}

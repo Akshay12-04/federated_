@@ -1,0 +1,295 @@
+/* Shared panels: train, analytics, logs, settings — no page-specific duplicates */
+
+/* Train — segment presets */
+.c-segment {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+}
+
+.c-segment__item {
+  position: relative;
+  flex: 1;
+  min-width: 100px;
+  cursor: pointer;
+}
+
+/* Overlay native radio so label stays clickable; keep input focusable for keyboard users */
+.c-segment__item input {
+  position: absolute;
+  inset: 0;
+  margin: 0;
+  opacity: 0;
+  cursor: pointer;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+}
+
+.c-segment__item input:focus-visible + span {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+.c-segment__item span {
+  display: block;
+  text-align: center;
+  padding: var(--space-3) var(--space-4);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-border-default);
+  background: var(--color-bg-input);
+  font-size: var(--text-sm);
+  font-weight: var(--font-medium);
+  color: var(--color-text-secondary);
+  transition: all var(--duration-fast) var(--ease-default);
+}
+
+.c-segment__item input:checked + span {
+  background: var(--color-primary-muted);
+  border-color: var(--color-border-active);
+  color: var(--color-text-primary);
+  box-shadow: var(--shadow-glow-primary);
+}
+
+.c-train-progress__status {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  margin-bottom: var(--space-4);
+  font-weight: var(--font-semibold);
+}
+
+.c-train-progress__dot {
+  width: 10px;
+  height: 10px;
+  border-radius: var(--radius-full);
+  background: var(--color-text-muted);
+}
+
+.c-train-progress__dot.is-running {
+  background: var(--color-warning);
+  box-shadow: 0 0 10px rgba(245, 158, 11, 0.5);
+}
+
+.c-train-progress__dot.is-done {
+  background: var(--color-success);
+}
+
+.c-train-progress__bar-wrap {
+  height: 8px;
+  border-radius: var(--radius-full);
+  background: var(--color-bg-input);
+  overflow: hidden;
+  margin-bottom: var(--space-4);
+}
+
+.c-train-progress__bar {
+  height: 100%;
+  width: 0%;
+  border-radius: var(--radius-full);
+  background: var(--gradient-primary);
+  transition: width var(--duration-normal) var(--ease-default);
+}
+
+.c-train-progress__msg {
+  font-size: var(--text-sm);
+  color: var(--color-text-secondary);
+}
+
+.c-hospital-list__items {
+  list-style: none;
+  margin: var(--space-4) 0 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.c-hospital-list__item {
+  padding: var(--space-4);
+  border-radius: var(--radius-md);
+  background: var(--color-bg-input);
+  border: 1px solid var(--color-border-subtle);
+}
+
+.c-hospital-list__main {
+  display: flex;
+  gap: var(--space-3);
+  margin-bottom: var(--space-3);
+}
+
+.c-hospital-list__dot {
+  width: 8px;
+  height: 8px;
+  margin-top: 6px;
+  border-radius: var(--radius-full);
+  background: var(--color-text-muted);
+  flex-shrink: 0;
+}
+
+.c-hospital-list__item--training .c-hospital-list__dot {
+  background: var(--color-warning);
+}
+
+.c-hospital-list__item--connected .c-hospital-list__dot {
+  background: var(--color-success);
+}
+
+.c-hospital-list__name {
+  font-size: var(--text-sm);
+  font-weight: var(--font-semibold);
+  color: var(--color-text-primary);
+}
+
+.c-hospital-list__meta {
+  font-size: var(--text-xs);
+  color: var(--color-text-muted);
+}
+
+.c-hospital-list__progress-wrap {
+  height: 4px;
+  background: rgba(255, 255, 255, 0.06);
+  border-radius: var(--radius-full);
+}
+
+.c-hospital-list__progress {
+  height: 100%;
+  background: var(--color-primary);
+  border-radius: var(--radius-full);
+  transition: width var(--duration-normal) var(--ease-default);
+}
+
+/* Analytics — confusion matrix */
+.c-confusion__grid {
+  display: grid;
+  grid-template-columns: auto repeat(2, 1fr);
+  gap: var(--space-2);
+  margin-top: var(--space-4);
+}
+
+.c-confusion__corner,
+.c-confusion__head,
+.c-confusion__row-label,
+.c-confusion__cell {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-3);
+  font-size: var(--text-xs);
+  border-radius: var(--radius-sm);
+}
+
+.c-confusion__corner {
+  color: var(--color-text-muted);
+}
+
+.c-confusion__head {
+  font-weight: var(--font-semibold);
+  color: var(--color-text-secondary);
+}
+
+.c-confusion__row-label {
+  justify-content: flex-end;
+  color: var(--color-text-secondary);
+  font-weight: var(--font-medium);
+}
+
+.c-confusion__cell {
+  font-weight: var(--font-bold);
+  color: var(--color-text-primary);
+}
+
+.c-data-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: var(--space-4);
+  font-size: var(--text-sm);
+}
+
+.c-data-table th,
+.c-data-table td {
+  padding: var(--space-3) var(--space-4);
+  text-align: left;
+  border-bottom: 1px solid var(--color-border-subtle);
+}
+
+.c-data-table th {
+  color: var(--color-text-muted);
+  font-weight: var(--font-medium);
+}
+
+.c-data-table tbody th {
+  color: var(--color-text-secondary);
+}
+
+.c-data-table td {
+  color: var(--color-text-primary);
+}
+
+/* Settings */
+.c-settings-slider-wrap {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.c-settings-slider-wrap input {
+  width: 120px;
+  accent-color: var(--color-primary);
+}
+
+.c-settings-actions {
+  display: grid;
+  gap: var(--card-gap);
+}
+
+@media (min-width: 640px) {
+  .c-settings-actions {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.c-action-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-4);
+}
+
+.c-action-card__title {
+  font-size: var(--text-sm);
+  font-weight: var(--font-semibold);
+  color: var(--color-text-primary);
+}
+
+.c-action-card__desc {
+  font-size: var(--text-xs);
+  color: var(--color-text-muted);
+  margin-top: var(--space-1);
+}
+
+.c-toggle {
+  cursor: pointer;
+}
+
+/* Logs footer */
+.p-logs__footer {
+  display: flex;
+  justify-content: center;
+  margin-top: var(--space-6);
+}
+
+/* Assistant prompts enabled */
+.c-prompt-chip {
+  cursor: pointer;
+  transition: border-color var(--duration-fast) var(--ease-default);
+}
+
+.c-prompt-chip:hover {
+  border-color: var(--color-border-active);
+  color: var(--color-text-primary);
+}
+
+.c-chat-input-bar__field:not(:disabled) {
+  opacity: 1;
+}

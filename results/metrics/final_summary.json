@@ -1,0 +1,27 @@
+{
+  "federated": {
+    "confusion_matrix": [
+      [
+        566,
+        334
+      ],
+      [
+        19,
+        581
+      ]
+    ]
+  },
+  "centralized": {
+    "confusion_matrix": null
+  },
+  "config": {
+    "hospitals": 4,
+    "rounds": 10,
+    "epochs": 8,
+    "noniid": true,
+    "dp": false,
+    "fraction": 1.0,
+    "seed": 42,
+    "trained_at": "2026-05-20T14:17:42"
+  }
+}
